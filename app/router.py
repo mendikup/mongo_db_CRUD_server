@@ -7,22 +7,18 @@ dal = Data_loader()
 def root():
     return {"ok": True}
 
+
 @app.get("/get_all_data")
 def get_all_data():
    res = dal.get_all_data()
    return res
 
+
 @app.post("/insert_new_soldier")
 def insert_new_soldier(data:dict):
-    res = dal.insert_new_soldier(
-        data["id"],
-        data["first_name"],
-        data["last_name"],
-        data["phone_number"],
-        data["rank"]
-
-    )
+    res = dal.insert_new_soldier(**data)
     return {"status": res}
+
 
 @app.put("/update_by_id")
 def update_by_id(data:dict):
