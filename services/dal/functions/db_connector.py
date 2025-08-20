@@ -3,9 +3,10 @@ import os
 
 class Conector():
     def __init__(self):
-        self.addres = os.getenv('ADDRESS')
-        self.db_name = os.getenv('DB_NAME')
-        self.collection_name = os.getenv('COLLETION_NAME')
+        self.addres = "mongodb://localhost:27017"
+        self.db_name = "enemy_soldiers"
+        self.collection_name = "soldier_details"
+
 
     def connect(self):
         self.client = MongoClient(self.addres)
@@ -16,4 +17,5 @@ class Conector():
         self.client.close()
         self.db = None
         self.collection = None
+
 
