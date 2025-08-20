@@ -1,5 +1,5 @@
-from interfaces.dal_interface import IData_loader
-from db_connector import Conector
+from services.dal.interfaces.dal_interface import IData_loader
+from services.dal.functions.db_connector import Conector
 
 class Data_loader(IData_loader):
 
