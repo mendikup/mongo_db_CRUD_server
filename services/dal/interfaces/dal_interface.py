@@ -6,11 +6,11 @@ class IData_loader(ABC):
         pass
 
     @abstractmethod
-    def get_aii_data(self):
+    def get_all_data(self):
         pass
 
     @abstractmethod
-    def Write_new_soldier(self,id,first_name,last_name,phone_number,rank):
+    def insert_new_soldier(self,id,first_name,last_name,phone_number,rank):
         pass
 
     @abstractmethod
